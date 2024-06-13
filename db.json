@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": "3",
+      "title": "JavaScript para DOM",
+      "completed": false
+    },
+    {
+      "id": "4",
+      "title": "Programación Imperativa con Javascript",
+      "completed": false
+    },
+    {
+      "id": "5",
+      "title": "React.js",
+      "completed": false
+    },
+    {
+      "id": "6",
+      "title": "Next.js",
+      "completed": false
+    }
+  ]
+}
