@@ -1,5 +1,7 @@
 import { Todo } from "../interfaces/types";
 
+
+
 // const URL_BASE = "http://18.219.160.0:8080/tasks"; // aws
 const URL_BASE = "http://localhost:4000/todos";
 
@@ -11,18 +13,20 @@ const defaultHeaders = {
 
 // Error class for http
 class HttpError extends Error {
-	constructor(response) {
-		super(`Http Error: ${response.statusText}`);
-		this.response = response;
-	}
+    response: Response;
+
+    constructor(response: Response) {
+        super(`Http Error: ${response.statusText}`);
+        this.response = response;
+    }
 }
 
-function handleResponse(response){
-    if(!response.ok){
-        throw new HttpError(response)
+function handleResponse(response: Response) {
+    if (!response.ok) {
+        throw new HttpError(response);
     }
 
-    return response.json()
+    return response.json();
 }
 
 export async function getTodos(){
